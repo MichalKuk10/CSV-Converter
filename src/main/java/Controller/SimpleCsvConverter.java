@@ -1,4 +1,8 @@
+package Controller;
+
 import java.io.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class SimpleCsvConverter {
@@ -7,6 +11,9 @@ public class SimpleCsvConverter {
         String line = "";
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
+
+
+
             while((line = br.readLine()) != null){
                 String[] values = line.split(",");
                 for (String value : values){
