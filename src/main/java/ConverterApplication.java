@@ -10,15 +10,16 @@ public class ConverterApplication {
         String inputType = args[1];
         String outputType = args[0];
 
-        if (outputType.equals("xml")){
-            simpleCvsConverter.convert(inputType, "xml");
-        }else if(outputType.equals("json")){
-            System.out.println("dotarlo do json");
-        }else if(outputType.equals("")){
-            System.out.println("dotarlo do pustego");
+        switch (outputType){
+            case "xml" :
+                simpleCvsConverter.convert(inputType, "xml");
+                break;
+            case "json" :
+                simpleCvsConverter.convert(inputType, "json");
+                break;
+            case " " :
+                simpleCvsConverter.convert(inputType);
         }
-
     }
-
 
 }

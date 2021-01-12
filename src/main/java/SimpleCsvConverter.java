@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.Scanner;
+
 
 public class SimpleCsvConverter {
 
@@ -8,7 +8,10 @@ public class SimpleCsvConverter {
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             while((line = br.readLine()) != null){
-                System.out.println(line );
+                String[] values = line.split(",");
+                for (String value : values){
+                    System.out.println(value);
+                }
             }
         }catch (FileNotFoundException e){
             e.printStackTrace();
@@ -16,14 +19,11 @@ public class SimpleCsvConverter {
             e.printStackTrace();
         }
 
-//        Scanner sc = new Scanner(new File(file));
-//
-//        sc.useDelimiter(",");
-//        while (sc.hasNext()){
-//            System.out.print(sc.next());
-//        }
-//        sc.close();
 
+    }
+
+    public void convert(String file){
+        System.out.println("dotarlo");
     }
 
 
