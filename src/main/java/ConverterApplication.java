@@ -1,16 +1,17 @@
 import Controller.SimpleCsvConverter;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ConverterApplication {
-    public static void main(String[] args) throws FileNotFoundException {
-        if (args.length == 0) {
-            throw new FileNotFoundException("No file found");
-        }
+    public static void main(String[] args) throws IOException {
+//        if (args.length == 0) {
+//            throw new FileNotFoundException("No file found");
+//        }
 
         SimpleCsvConverter simpleCvsConverter = new SimpleCsvConverter();
-        String inputType = args[1];
-        String outputType = args[0];
+        String inputType = "/Users/michal/Desktop/Codecool/Projects/CSV-Converter/src/main/resources/annual.csv";
+        String outputType = "json";
 
         switch (outputType){
             case "xml" :
