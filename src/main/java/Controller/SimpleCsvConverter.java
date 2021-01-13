@@ -3,6 +3,7 @@ package Controller;
 
 import View.CSV;
 import View.JsonOutputFormatter;
+import View.XmlOutputFormatter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -16,11 +17,14 @@ import java.util.Map;
 public class SimpleCsvConverter {
 
     JsonOutputFormatter jsonOutputFormatter = new JsonOutputFormatter();
+    XmlOutputFormatter xmlOutputFormatter = new XmlOutputFormatter();
 
     public void convert(String file, String outputFormat) throws IOException {
 
         if (outputFormat.equals("json")){
            jsonOutputFormatter.printToConsole(fetchData(file));
+        }else if(outputFormat.equals("xml")){
+            xmlOutputFormatter.printToConsole(fetchData(file));
         }
 
     }

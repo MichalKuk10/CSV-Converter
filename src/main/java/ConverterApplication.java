@@ -11,7 +11,7 @@ public class ConverterApplication {
 
         SimpleCsvConverter simpleCvsConverter = new SimpleCsvConverter();
         String inputType = "/Users/michal/Desktop/Codecool/Projects/CSV-Converter/src/main/resources/annual.csv";
-        String outputType = "json";
+        String outputType = "xml";
 
         switch (outputType){
             case "xml" :
